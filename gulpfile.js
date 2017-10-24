@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var handlebars = require('gulp-compile-handlebars');
-var sass = require('gulp-scss');
+var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
@@ -123,12 +123,13 @@ gulp.task('browserSync', function() {
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'handlebars', 'minify-js'], function() {
-    gulp.watch('sass/*.scss', ['sass']);
+    gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
     gulp.watch('**/*.handlebars', ['handlebars']);
 
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('dist/*.html', browserSync.reload);
+    gulp.watch('dist/css/*.css', browserSync.reload);
     gulp.watch('dist/js/**/*.js', browserSync.reload);
 });

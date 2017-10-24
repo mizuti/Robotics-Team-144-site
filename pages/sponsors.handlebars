@@ -1,0 +1,21 @@
+{{> header}}
+{{> navbar}}
+<section class="container">
+	<div class="row">
+		<h2>Sponsors</h2>
+		{{#each sponsors}}
+		<div class="col-xs-6 col-md-3">
+			<a href="#" class="thumbnail">{{this}}
+				<img src="{{@root.placeholder.medium}}" alt="{{this}} logo">
+			</a>
+		</div>
+		{{/each}}
+	</div>
+</section>
+
+
+{{>footer}}
+	<script type="text/javascript">
+		$("#sponsorLink").parent().addClass('active')
+	</script>
+{{> close}}

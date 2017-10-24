@@ -1,0 +1,27 @@
+{
+  "name": "team-144",
+  "title": "Team-144",
+  "version": "0.1.0",
+  "description": "A website to assist with in-game grouping.",
+  "repository": {
+    "type": "git",
+    "url": "git:/github.com/mizuti/Robotics-Team-144-site"
+  },
+  "engines": {
+    "npm": ">=3",
+    "node": ">=5"
+  },
+  "author": "Kyle Rentschler",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-header": "^1.8.7",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "jquery": "^1.11.3"
+  }
+}

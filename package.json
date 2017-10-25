@@ -7,6 +7,14 @@
     "type": "git",
     "url": "git:/github.com/mizuti/Robotics-Team-144-site"
   },
+  "scripts": {
+    "start": "gulp",
+    "less": "gulp less",
+    "sass": "gulp sass",
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "dist": "gulp build"
+  },
   "engines": {
     "npm": ">=3",
     "node": ">=5"
@@ -18,12 +26,18 @@
     "browser-sync": "^2.13.0",
     "font-awesome": "^4.6.3",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "del": "^2.2.2",
+    "run-sequence": "^1.2.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.0",
     "gulp-clean-css": "^2.0.10",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-header": "^1.8.7",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^1.5.4",
-    "jquery": "^1.11.3"
+    "jquery": "^1.11.3",
+    "sass-lint": "^1.12.1"
   }
 }

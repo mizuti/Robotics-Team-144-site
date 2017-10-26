@@ -12,41 +12,25 @@ var browserSync = require('browser-sync').create(),
     header = require('gulp-header'),
     rename = require("gulp-rename"),
     uglify = require('gulp-uglify'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    templateData = require('./template-data');
 
 
 /************************************************************************************/
 // Compile handlebars templates
 gulp.task('handlebars', function() {
-    var templateData = {
-            placeholder: {
-                medium: 'https://placehold.it/450x350'
-            },
-            sponsors: [
-                "Clippard",
-                "P&G",
-                "Skyline"
-            ],
-            bannerGallery: [
-                'https://placehold.it/450x350',
-                'https://placehold.it/450x350',
-                'https://placehold.it/450x350',
-                'https://placehold.it/450x350',
-            ]
-        },
-        options = {
+    return gulp.src('pages/*.handlebars')
+        .pipe(handlebars(templateData, {
             ignorePartials: true,
             partials: {
             },
-            batch: ['./partials'],
+            batch: ['./components'],
             helpers: {
                 capitals: function(str){
                     return str.toUpperCase();
                 }
             }
-        }
-    return gulp.src('pages/*.handlebars')
-        .pipe(handlebars(templateData, options))
+        }))
         .pipe(rename({extname: '.html'}))
         .pipe(gulp.dest('dist'))
 });

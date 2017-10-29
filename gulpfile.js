@@ -13,18 +13,18 @@ var browserSync = require('browser-sync').create(),
     rename = require("gulp-rename"),
     uglify = require('gulp-uglify'),
     runSequence = require('run-sequence'),
-    templateData = require('./template-data');
+    templateData = require('./src/template-data');
 
 
 /************************************************************************************/
 // Compile handlebars templates
 gulp.task('handlebars', function() {
-    return gulp.src('pages/*.handlebars')
+    return gulp.src('src/pages/*.handlebars')
         .pipe(handlebars(templateData, {
             ignorePartials: true,
             partials: {
             },
-            batch: ['./components'],
+            batch: ['src/components'],
             helpers: {
                 capitals: function(str){
                     return str.toUpperCase();
@@ -40,7 +40,7 @@ gulp.task('handlebars', function() {
 
 // Task to compile SCSS
 gulp.task('sass', function () {
-    return gulp.src('./scss/main.scss')
+    return gulp.src('src/scss/main.scss')
       .pipe(sourcemaps.init())
       .pipe(sass({
         outputStyle: 'nested',
@@ -80,7 +80,7 @@ gulp.task('clean', function () {
 
 // Minify JS
 gulp.task('minify-js', function() {
-    return gulp.src('js/main.js')
+    return gulp.src('src/js/main.js')
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('dist/js'))
@@ -105,15 +105,15 @@ gulp.task('copy', function() {
         .pipe(gulp.dest('dist/vendor/font-awesome'))
     
     gulp.src([
-        '.htaccess',
-        'robots.txt',
-        'humans.txt',
-        'favicon.ico',
-        'icon.png',
-        'tile-wide.png',
-        'tile.png',
-        '404.html',
-        'browserconfig.xml'
+        'src/.htaccess',
+        'src/robots.txt',
+        'src/humans.txt',
+        'src/favicon.ico',
+        'src/icon.png',
+        'src/tile-wide.png',
+        'src/tile.png',
+        'src/404.html',
+        'src/browserconfig.xml'
     ])
     .pipe(gulp.dest('dist/'))
 })
@@ -133,9 +133,9 @@ gulp.task('browserSync', function() {
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync','clean', 'sass', 'handlebars', 'minify-js'], function() {
-    gulp.watch('scss/*.scss', ['sass']);
-    gulp.watch('css/*.css', ['minify-css']);
-    gulp.watch('js/*.js', ['minify-js']);
+    gulp.watch('src/scss/*.scss', ['sass']);
+    gulp.watch('src/css/*.css', ['minify-css']);
+    gulp.watch('src/js/*.js', ['minify-js']);
     gulp.watch('**/*.handlebars', ['handlebars']);
 
     // Reloads the browser whenever HTML or JS files change

@@ -1,4 +1,6 @@
 {{> header}}
+{{> navbar}}
+
 <section>
 	<div class="container">
 		<div class="row">
@@ -28,9 +30,11 @@
 		</div>
 	</div>
 </section>
-<script type="text/javascript">
-	$("#updatesLink").parent().addClass('active')
-</script>
+
+
 {{>footer}}
 
-	
+	<script type="text/javascript">
+		$("#updatesLink").parent().addClass('active')
+	</script>
+{{> close}}

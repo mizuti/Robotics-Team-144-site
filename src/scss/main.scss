@@ -3,3 +3,18 @@
 @import "base/styles";
 @import "normalize";
 @import "homepage";
+@import "navbar";
+
+
+// Misc
+
+body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+
+.horizontal-list {
+    display: flex;
+}

@@ -9,6 +9,7 @@ var browserSync = require('browser-sync').create(),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     handlebars = require('gulp-compile-handlebars'),
+    layouts = require('handlebars-layouts'),
     header = require('gulp-header'),
     rename = require("gulp-rename"),
     uglify = require('gulp-uglify'),
@@ -28,7 +29,8 @@ gulp.task('handlebars', function() {
             helpers: {
                 capitals: function(str){
                     return str.toUpperCase();
-                }
+                },
+                extend: layouts.extend
             }
         }))
         .pipe(rename({extname: '.html'}))

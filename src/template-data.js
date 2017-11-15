@@ -21,14 +21,47 @@ module.exports = {
         medium: 'https://placehold.it/450x350'
     },
     sponsors: [
-        "Clippard",
-        "P&G",
-        "Skyline"
+    
+        {
+            title: "Clippard",
+        },
+        {
+            title: "P&G",
+
+        },
+        {
+            title: "Skyline"
+        },
     ],
-    bannerGallery: [
-        'https://placehold.it/450x350',
-        'https://placehold.it/450x350',
-        'https://placehold.it/450x350',
-        'https://placehold.it/450x350',
-    ]
+    seasonEvents: [
+        {
+            title: 'Kick-Off',
+            date: 'January 6, 2018',
+            location: {
+                title: 'Detriot',
+            }
+        },
+        {
+            title: 'Miami Valley Regional',
+            date: 'February 28 - March 2',
+            location: {
+                title: 'Detriot',
+            }
+        },
+        {
+            title: 'Smokey Mountains Regional',
+            date: 'March 21 - March 24',
+            location: {
+                title: 'Detriot',
+            }
+        },
+        {
+            title: 'Championship',
+            date: 'April 24-27',
+            location: {
+                title: 'Detriot',
+            }
+        },
+
+    ],
 }

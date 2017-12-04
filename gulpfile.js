@@ -9,7 +9,6 @@ var browserSync = require('browser-sync').create(),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     handlebars = require('gulp-compile-handlebars'),
-    layouts = require('handlebars-layouts'),
     header = require('gulp-header'),
     rename = require("gulp-rename"),
     uglify = require('gulp-uglify'),
@@ -20,21 +19,20 @@ var browserSync = require('browser-sync').create(),
 /************************************************************************************/
 // Compile handlebars templates
 gulp.task('handlebars', function() {
-    return gulp.src('src/pages/*.handlebars')
+    return gulp.src('src/pages/*.hbs')
         .pipe(handlebars(templateData, {
             ignorePartials: true,
             partials: {
             },
-            batch: ['src/components'],
+            batch: ['src/partials'],
             helpers: {
                 capitals: function(str){
                     return str.toUpperCase();
                 },
-                extend: layouts.extend
             }
         }))
-        .pipe(rename({extname: '.html'}))
-        .pipe(gulp.dest('dist'))
+        .pipe(rename({ extname: '.html' }))
+        .pipe(gulp.dest('dist'));
 });
 /************************************************************************************/
 
@@ -105,7 +103,7 @@ gulp.task('copy', function() {
             '!node_modules/font-awesome/*.json'
         ])
         .pipe(gulp.dest('dist/vendor/font-awesome'))
-    
+
     gulp.src([
         'src/.htaccess',
         'src/robots.txt',
@@ -138,7 +136,7 @@ gulp.task('dev', ['browserSync','clean', 'sass', 'handlebars', 'minify-js'], fun
     gulp.watch('src/scss/*.scss', ['sass']);
     gulp.watch('src/css/*.css', ['minify-css']);
     gulp.watch('src/js/*.js', ['minify-js']);
-    gulp.watch('**/*.handlebars', ['handlebars']);
+    gulp.watch('src/**/*.hbs', ['handlebars']);
 
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('dist/*.html', browserSync.reload);

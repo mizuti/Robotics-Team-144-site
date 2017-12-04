@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Team 144 - The R.O.C.K</title>
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Theme CSS -->
-    <link href="css/main.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-<body id="page-top">
-    <main>
+{{#> layouts/base title="Team 144 - The R.O.C.K"}}
+    {{#*inline "content"}}
         <section>
             <div class="header-content">
                 <div class="header-content-inner">
@@ -34,34 +7,17 @@
                     <hr>
                     <div class="row">
                         <div class="">
+                            {{#each seasonEvents}}
                                 <div class="events">
-                                    <h3>Kick-Off</h3>
+                                    <h3>{{title}}</h3>
+                                    {{#if location}}
                                     <div class+"location">
-                                        Detriot
+                                        {{location.title}}
                                     </div>
-                                    <h4 class="date">January 6, 2018</h4>
+                                    {{/if}}
+                                    <h4 class="date">{{date}}</h4>
                                 </div>
-                                <div class="events">
-                                    <h3>Miami Valley Regional</h3>
-                                    <div class+"location">
-                                        Detriot
-                                    </div>
-                                    <h4 class="date">February 28 - March 2</h4>
-                                </div>
-                                <div class="events">
-                                    <h3>Smokey Mountains Regional</h3>
-                                    <div class+"location">
-                                        Detriot
-                                    </div>
-                                    <h4 class="date">March 21 - March 24</h4>
-                                </div>
-                                <div class="events">
-                                    <h3>Championship</h3>
-                                    <div class+"location">
-                                        Detriot
-                                    </div>
-                                    <h4 class="date">April 24-27</h4>
-                                </div>
+                            {{/each}}
                         </div>
                     </div>
                 </div>
@@ -123,40 +79,5 @@
 
             </div>
         </section>
-    </main>
-<footer class="bg-light" id="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <h3 class="section-heading">Want to get involved?</h3>
-                <p>Send us and email asking to recieve our team updates.</p>
-                <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                <p><a href="mailto:your-email@your-domain.com">team144@email.com</a></p>
-            </div>
-            <div class="col-xs-12 col-md-4 text-center">
-                <div class="btn btn-primary btn-center">Get Sponsorship Info</div>
-            </div>
-            <div class="col-xs-12 col-md-4 text-center pull-right">
-                <h2 class="col-xs-12">Sponsors</h2>
-                    <h3 class="">Clippard</h3>
-                    <h3 class="">P&amp;G</h3>
-                    <h3 class="">Skyline</h3>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="vendor/jquery/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-
-<!-- Theme JavaScript -->
-<script src="js/main.min.js"></script>
-
-
-
-
+    {{/inline}}
+{{/layouts/base}}

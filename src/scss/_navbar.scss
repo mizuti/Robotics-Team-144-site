@@ -1,22 +1,64 @@
+// row display flex flex-row flex-column flex-row-l flex-space-between-m
+
 .navbar {
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     width: 100%;
-    height: 3em;
     z-index: 999;
-    .navbar-header {
-        
-    }
 
+    .navbar-header {
+        font-size: 20px;
+        margin-left: $navbar-margin;
+        display: flex;
+        justify-content: space-around;
+        flex-flow: column;
+
+        a {
+            text-decoration: none;
+        }
+    }
 
     .navbar-nav {
         display: flex;
         list-style: none;
-        margin: 0;
+        margin: 10px $navbar-margin 10px 0;
 
         li {
             margin: 0 1em;
-        }
 
+            a {
+                font-size: 18px;
+                text-decoration: none;
+                position: relative;
+                padding-bottom: 5px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $rock-bright-red;
+                    visibility: hidden;
+                    -webkit-transform: scaleX(0);
+                    transform: scaleX(0);
+                    -webkit-transition: all 0.15s ease-in-out;
+                    transition: all 0.15s ease-in-out;
+                }
+                &:hover:before {
+                    visibility: visible;
+                    transform: scaleX(1);
+                    -webkit-transform: scaleX(1);
+                }
+
+                &:hover,
+                &:focus {
+                    // border-bottom: solid 2px red;
+                }
+            }
+        }
     }
 }
 

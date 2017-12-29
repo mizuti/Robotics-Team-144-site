@@ -2421,6 +2421,24 @@ input:-ms-input-placeholder {
   .pad-60-print {
     padding: 60px; } }
 
+body {
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+.horizontal-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+main {
+  text-align: center; }
+
+section {
+  padding: 200px 0;
+  margin: 0 auto;
+  min-height: 100vh; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -2877,24 +2895,6 @@ template {
           visibility: visible;
           transform: scaleX(1);
           -webkit-transform: scaleX(1); }
-
-body {
-  position: absolute;
-  height: 100%;
-  width: 100%; }
-
-.horizontal-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-main {
-  text-align: center; }
-
-section {
-  padding: 200px 0;
-  margin: 0 auto;
-  height: 100vh; }
 
 .events {
   margin: 1em 0; }

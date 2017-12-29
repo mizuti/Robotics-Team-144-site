@@ -1,21 +1,32 @@
-body {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+
+html {
+    font-size: calc( 16px + 8 * ((100vw - 500px) / 1500));
 }
-
-
-.horizontal-list {
+.site-header {
+    align-items: center;
     display: flex;
+    position: relative;
 }
+
 main {
     text-align: center;
 }
 
 section {
-    padding: 200px 0;
     margin: 0 auto;
     min-height: 100vh;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 14px;
 }
 
 // Medium devices

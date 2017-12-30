@@ -3,23 +3,15 @@
         <section>
             <header class="header-content">
                 <div class="header-content-inner">
-                    <h1 id="homeHeading">Home of Robotics Team 144<br><span class="heading rock">The R.O.C.K</span></h1>
-                    <hr>
-                    <div>
+                    <header class="heading">
+                        <h1>Home of Robotics Team 144<br><span class="rock-header">The R.O.C.K</span></h1>
+                    </header>
+                    <div class="events">
                         {{#each seasonEvents}}
-                            <div class="events">
-                                <h3>{{title}}</h3>
-                                {{#if location}}
-                                <div class+"location">
-                                    {{location.title}}
-                                </div>
-                                {{/if}}
-                                <h4 class="date">{{date}}</h4>
-                            </div>
+                            {{> includes/event}}
                         {{/each}}
                     </div>
                 </div>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll scroll-btn">About the Team</a>
             </header>
         </section>
         <section class="bg-primary" id="about">

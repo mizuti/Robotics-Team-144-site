@@ -67,7 +67,7 @@
                 transition: all 0.15s ease-in-out;
             }
 
-            &:hover:before rgb(64.7%, 16.5%, 16.5%){
+            &:hover:before {
                 visibility: visible;
                 transform: scaleX(1);
                 -webkit-transform: scaleX(1);

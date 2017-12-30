@@ -2055,6 +2055,15 @@ main {
   text-align: center; }
 
 section {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto;
   min-height: 100vh; }
 
@@ -2066,6 +2075,9 @@ h2 {
 
 h3 {
   font-size: 14px; }
+
+.heading {
+  margin: 1em 0; }
 
 .navbar {
   -webkit-box-align: stretch;
@@ -2133,7 +2145,7 @@ h3 {
         transform: scaleX(0);
         -webkit-transition: all 0.15s ease-in-out;
         transition: all 0.15s ease-in-out; }
-      .navbar-nav li a:hover:before rgb(64.7%, 16.5%, 16.5%) {
+      .navbar-nav li a:hover:before {
         visibility: visible;
         transform: scaleX(1);
         -webkit-transform: scaleX(1); }

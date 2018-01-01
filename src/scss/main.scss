@@ -1,18 +1,7 @@
 @import "normalize";
 @import "base/styles";
-
 @import "variables";
-@import "structure";
 @import "mixins";
-
+@import "components";
+@import "structure";
 @import "navbar";
-
-
-// Misc
-
-.events {
-    margin: 1em 0;
-    .locations {
-
-    }
-}

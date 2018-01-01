@@ -1,12 +1,32 @@
 $rock-bright-red: rgb(225, 74, 74);
 $rock-medium-red: rgb(197, 65, 65);
 
-$navbar-height: 65px;
-$navbar-margin: 75px;
-
-
 // $light-text: #f3f3f3;
 $light-text: #fff;
-
-
+$dark-text: #151515;
 $theme-dark-red: #8a1b1b;
+$background-light: #f6f8fa;
+$light-border: 1px solid #e1e4e8;
+
+// Structure
+$site-heading-font: 'Roboto Condensed', sans-serif;
+$site-content-font:'Roboto Slab', serif; 
+$large-max-width: none;
+$large-section-background: white;
+
+// Navbar
+$navbar-height: 65px;
+$navbar-margin: 75px;
+$large-navbar-background: white;
+$large-navbar-margin: none;
+
+// Events
+$event-heading-font: $site-heading-font;
+$events-font-family: $site-content-font;
+$events-font-size: 14px;
+
+
+
+
+
+

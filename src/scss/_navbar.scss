@@ -1,6 +1,6 @@
 // row display flex flex-row flex-column flex-row-l flex-space-between-m
 
-.navbar {
+nav header {
     align-items: stretch;
     background-color: $theme-dark-red;
     border-bottom: solid 1px transparent;
@@ -20,7 +20,7 @@
 
     a {
         text-decoration: none;
-        color: $light-text;
+        color: inherit;
     }
 }
 
@@ -28,11 +28,11 @@
 .navbar-header {
     font-size: 16px;
     text-align: center;
+    color: $light-text;
 }
 
 
  .navbar-nav {
-
     display: flex;
     list-style: none;
     margin: 0;
@@ -49,34 +49,10 @@
         a {
             position: relative;
             padding-bottom: 5px;
-            // color: $light-text;
+            color: inherit;
             background-color: transparent;
 
-            &:before {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: $rock-bright-red;
-                visibility: hidden;
-                -webkit-transform: scaleX(0);
-                transform: scaleX(0);
-                -webkit-transition: all 0.15s ease-in-out;
-                transition: all 0.15s ease-in-out;
-            }
-
-            &:hover:before {
-                visibility: visible;
-                transform: scaleX(1);
-                -webkit-transform: scaleX(1);
-            }
-
-            &:hover,
-            &:focus {
-                // border-bottom: solid 2px red;
-            }
+            @include white-hover-effect;
         }
     }
 }
@@ -88,10 +64,55 @@
     
 }
 
+
 // Large devices
 @include breakpoint(l) {
-    navbar {
+    .navbar {
+        // background-color: $large-navbar-background;
+        max-width: $large-max-width;
+        margin: $large-navbar-margin;
 
+        &.scrolling {
+            border-bottom: solid 1px #c6c6c6;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+    
+        &.scroll-top {
+            border-bottom: solid 1px transparent;
+        }
+    }
+    
+    .navbar-header {
+        align-items: initial;
+        // background-color: transparent;
+        // color: $dark-text;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1em;
+        
+        .heading {
+            margin: 0;
+            font-size: 1.3em;
+
+            a {
+                @include white-hover-effect;
+            }
+
+        }
+    }
+
+    .navbar-nav {
+        list-style: none;
+
+        
+        li {
+            margin: 0 1em;
+            background-color: transparent;
+            flex-grow: 1;
+            text-align: center;
+        }
     }
 }
 

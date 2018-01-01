@@ -1,6 +1,7 @@
 
 html {
     font-size: calc( 16px + 8 * ((100vw - 500px) / 1500));
+    font-family: 'Roboto Condensed', sans-serif;
 }
 .site-header {
     align-items: center;
@@ -10,19 +11,25 @@ html {
 
 main {
     text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 section {
+
+    font-family: 'Roboto Condensed', sans-serif;
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: 0 auto;
     min-height: 100vh;
-
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $site-content-font;
 }
 
 h1 {
-    font-size: 18px;
+    font-family: $site-heading-font;
 }
 
 h2 {
@@ -34,7 +41,13 @@ h3 {
 }
 
 .heading {
+    font-family: $site-heading-font;
     margin: 1em 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
 }
 
 // Medium devices
@@ -45,6 +58,13 @@ h3 {
 
 // Large devices
 @include breakpoint(l) {
+    section {
+        max-width: $large-max-width;
+        background-color: $large-section-background;
+    }
+
+    .home-header {
+    }
 }
 
 

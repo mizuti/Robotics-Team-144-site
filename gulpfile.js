@@ -116,6 +116,9 @@ gulp.task('copy', function() {
         'src/browserconfig.xml'
     ])
     .pipe(gulp.dest('dist/'))
+
+    // copy all images and other assets
+    gulp.src(['assets/*']).pipe(gulp.dest('dist/assets'))
 })
 
 

@@ -1,18 +1,16 @@
 {{#> layouts/base title="Team 144 - The R.O.C.K"}}
     {{#*inline "content"}}
         <section class="home-header">
-            <div class="">
-                <header class="header-content">
-                    <h1 class="rock-header">The R.O.C.K</h1>
-                </header>
+            <header class="header-content">
+                <h1 class="rock-header">The R.O.C.K</h1>
+                <img src="assets/full_team.jpg" alt="">
+            </header>
 
-                <section class="events">
-                    {{#each seasonEvents}}
-                        {{> includes/event}}
-                    {{/each}}
-                </section>
-            </div>
-
+            <section class="events">
+                {{#each seasonEvents}}
+                    {{> includes/event}}
+                {{/each}}
+            </section>
         </section>
         <section class="bg-primary" id="about">
             <div class="container">

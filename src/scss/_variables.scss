@@ -6,9 +6,20 @@ $light-text: #fff;
 $dark-text: #151515;
 $theme-dark-red: #8a1b1b;
 $background-light: #f6f8fa;
+
+
+// light effects
 $light-border: 1px solid #e1e4e8;
+$subtle-shadow: 0 1px 4px 0 rgba(0,0,0,0.37);
 
 // Structure
+$small-spacing-margin: 10px 0;
+$medium-spacing-margin: 20px 0;
+$large-spacing-margin: 40px 0;
+
+$small-padding: 10px;
+$medium-padding: 20px;
+
 $site-heading-font: 'Roboto Condensed', sans-serif;
 $site-content-font:'Roboto Slab', serif; 
 $large-max-width: none;

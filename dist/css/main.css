@@ -2042,17 +2042,18 @@ input:-ms-input-placeholder {
 .events {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
-          align-items: stretch; }
+          align-items: stretch;
+  padding: 0 0 0 20px; }
 
 .event {
-  margin: 1em;
+  margin: 20px 0;
+  padding: 20px;
   background-color: #f6f8fa;
   border: 1px solid #e1e4e8; }
   .event h1 {
     font-size: 1.5em;
     font-family: "Roboto Condensed", sans-serif;
-    margin: .25em 0;
-    padding: .5em; }
+    margin: 0; }
     .event h1 span {
       font-size: 14px;
       display: block;
@@ -2147,7 +2148,16 @@ h3 {
 @media only screen and (min-width: 980px) {
   section {
     max-width: none;
-    background-color: white; } }
+    background-color: white;
+    padding: 0 20px; }
+  .home-header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative; }
+    .home-header img {
+      max-width: 100%; } }
 
 nav header {
   -webkit-box-align: stretch;

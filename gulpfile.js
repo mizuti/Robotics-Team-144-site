@@ -118,7 +118,8 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('dist/'))
 
     // copy all images and other assets
-    gulp.src(['assets/*']).pipe(gulp.dest('dist/assets'))
+    gulp.src(['assets/*'])
+    .pipe(gulp.dest('dist/assets'))
 })
 
 

@@ -1,18 +1,18 @@
-// ***********************************************************
 .events {
     align-items: stretch;
+    padding: 0 0 0 $medium-padding;
 }
 
 .event {
-    margin: 1em;
+    margin: $medium-spacing-margin;
+    padding: $medium-padding;
     background-color: $background-light;
     border: $light-border;
     
     h1 {
         font-size: 1.5em;
         font-family: $site-heading-font;
-        margin: .25em 0;
-        padding: .5em;
+        margin: 0;
         span {
             font-size: 14px;
             display: block;
@@ -42,4 +42,3 @@
         }
     }
 }
-// ***********************************************************

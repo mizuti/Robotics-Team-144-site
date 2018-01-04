@@ -61,9 +61,16 @@ h3 {
     section {
         max-width: $large-max-width;
         background-color: $large-section-background;
+        padding: 0 $medium-padding;
     }
 
     .home-header {
+        flex-direction: row;
+        position: relative;
+        
+        img {
+            max-width: 100%;
+        }
     }
 }
 
